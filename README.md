@@ -51,15 +51,15 @@ Total time: 12 units
 
 
 Q2.
-1. 
-2. 
-3.
-4.
-5.
+
+1. In PIP, T2 starts at time = 0 and runs uninterrupted due to priority inheritance until time = 5. In PPP, T2 starts at time = 0 and runs uninterrupted due to the priority ceiling, completing at time = 5.
+2. T2 completes at time = 5 in both protocols, so neither protocol is faster for T2.
+3. In both PIP and PPP, the total execution time is 12 units.
+4. T1 does not experience priority inversion in either, becuase in PIP T2 inherits T1’s priority and is not preempted by T3, while in PPP because the priority ceiling prevents T3 from preempting T2.
+5. In PIP, since T2 inherits T1's priority when T1 requests the resource, T3 cannot preempt T2 even though it arrives at time = 2. As a result, T3 is forced to wait until both T2 and T1 finish before it executes. In PPP, when T2 acquires the lock at time = 0, the system sets the priority ceiling to priority 1 (matching T1, the highest-priority thread that can use the resource). This prevents T3 (priority 2) from preempting T2 when it arrives at time = 2. As a result, T3 is forced to wait until both T2 and T1 finish before it executes.
+
 
 Part 2
-
-
 
 
 ia
