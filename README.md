@@ -61,19 +61,37 @@ Q2.
 
 Part 2
 
+A-bit operating system, B pages, C of RAM
 
-ia
-ib
-ic
-id
-ie
-iia
-iib
-iic
-iid
-iie
-iiia
-iiib
-iiic
-iiid
-iiie
+a: Use A
+b: log2(C)
+c: log2(B)
+d: Virtual Adress - Offset
+e: Physical Adress - Offset
+
+
+32-bit operating system, 4-KB pages, 1 GB of RAM
+
+ia: 32 bits
+ib: log2(1 GB) = log2(2^30) = 30 bits
+ic: log2(4 KB) = log2(2^12) = 12 bits
+id: 32 - 12 = 20 bits
+ie: 30 - 12 = 18 bits
+
+
+32-bit operating system, 16-KB pages, 2 GB of RAM
+
+iia: 32 bits
+iib: log2(2 GB) = log2(2^31) = 31 bits
+iic: log2(16 KB) = log2(2^14) = 14 bits
+iid: 32 - 14 = 18 bits
+iie: 31 - 14 = 17 bits
+
+
+64-bit operating system, 16-KB pages, 16 GB of RAM
+
+iiia:64 bits
+iiib: log2(16 GB) = log2(2^34) = 34 bits
+iiic: log2(16 KB) = log2(2^14) = 14 bits
+iiid: 64 - 14 = 50 bits
+iiie: 34 - 14 = 20 bits
